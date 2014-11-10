@@ -1,0 +1,357 @@
+// 
+// nui-theme-default.less
+//
+//
+//
+
+
+// Import all the shit we need
+@import "nui-base.css";
+@import "nui-ui.css";
+
+// END IMPORT
+
+
+body {
+	background-color: #555;
+	padding: 75px 0px 75px 0px;
+}
+
+//
+.nui-theme-default {
+	// #veil
+	.nui-model-window-background {
+		background-color: #333;
+		opacity: .25;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+		display: none;
+	}
+	.nui-model-window-background.for-new-item-wheel {
+		top: 80px;
+		height: ~"calc(100% - 160px)";
+	}
+
+
+// 
+	.nui-toolbar {
+//
+		&.nui-toolbar-top {
+			background-color: #666;
+			display: block;
+			height: 80px;
+			width: 100%;
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			border-bottom: 1px solid #555;
+			box-shadow: 0px 0px 10px -2px #333;
+		}
+
+//
+		&.nui-toolbar-bottom {
+			background-color: #666;
+			display: block;
+			height: 80px;
+			width: 100%;
+			position: fixed;
+			bottom: 0px;
+			left: 0px;
+			border-top: 1px solid #555;
+			box-shadow: 0px 0px 10px -2px #333;
+
+			.nui-left {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 33%;
+				height: 80px;
+			}
+			.nui-middle {
+				position: absolute;
+				top: 0px;
+				left: 33%;
+				width: 34%;
+				height: 80px;
+				text-align: center;
+			}
+			.nui-right {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				width: 33%;
+				height: 80px;
+			}
+		}
+	}
+//
+//
+//
+	.event-circle {
+		fill: transparent;
+		stroke: transparent;
+	}
+	.inner-circle {
+		fill: #999;
+		stroke: #222;	
+
+		stroke-width: 5px;
+		stroke-linecap: butt;
+		stroke-linejoin: miter;
+		stroke-opacity: .5;
+	}
+	.outer-circle {
+		fill: #ccc;
+		stroke: #333;
+
+		stroke-width: 5px;
+		stroke-linecap: butt;
+		stroke-linejoin: miter;
+		stroke-opacity: .5;
+	}
+
+// 
+// 
+// 
+	.event-catcher {
+		fill: transparent;
+		stroke: transparent;
+	}
+
+	#note {
+		text-align: center;
+		width: 640px;
+		margin: 0px auto;
+	}
+
+	//#new-item-wheel-container
+	#new-item-wheel-panel {
+		display: none;
+		text-align: center;
+		margin: 0px auto;
+	}
+
+	.nui-wheel-container {
+		// needs to be NOT static
+		// so that the z-order is preserved
+		// otherwise, in chrome fixed/absolute is always on top;
+		position: relative;
+	}
+	.nui-wheel {
+		margin: 0px auto;
+	}
+
+	#new-item-wheel {
+		position: relative;
+		text-align: left;
+		display: none;
+
+		.button-text {
+			fill-opacity:1;
+			stroke-opacity: 0;
+			stroke-width: 1px;
+			stroke: #000000;
+			fill: #fff;
+			font-size: 100%;
+			text-align: center;
+			text-shadow: 1px 1px 2px #333;
+		}
+
+		.wheel-item:hover,
+		.wheel-item.hover {
+			fill: #666;
+			stroke: #333;
+			stroke-opacity: 0;
+		}
+		.wheel-item {
+			fill: #888;
+		}
+		.wheel-item-alias {
+			fill: #000;
+			fill-opacity: 0;
+			stroke: #000;	
+			stroke-opacity: 
+			0;
+		}
+		.wheel-item-alias:hover,
+		.wheel-item-alias.hover {
+
+		}
+
+		#new-0.wheel-item:hover,
+		#new-0.wheel-item.hover {
+			
+		}
+		#new-1.wheel-item:hover,
+		#new-1.wheel-item.hover {
+			
+		}
+		#new-2.wheel-item:hover,
+		#new-2.wheel-item.hover {
+			
+		}
+		#new-3.wheel-item:hover,
+		#new-3.wheel-item.hover {
+			
+		}
+		#new-4.wheel-item:hover,
+		#new-4.wheel-item.hover {
+			
+		}
+		#new-5.wheel-item:hover,
+		#new-5.wheel-item.hover {
+			
+		}
+		#new-6.wheel-item:hover,
+		#new-6.wheel-item.hover {
+			
+		}
+		#new-7.wheel-item:hover,
+		#new-7.wheel-item.hover {
+			
+		}
+
+
+		#center-button {
+			fill: #eaeaea;
+			stroke: #000000;
+			stroke-width: 5px;
+			stroke-linecap: butt;
+			stroke-linejoin: miter;
+			stroke-opacity: .5;
+
+			.middle-button-text {
+				fill: #333;
+			}
+		}
+		#center-button:hover,
+		#center-button.hover {
+			fill: #dfdfdf;
+		}
+
+
+
+// EDGES
+		.button-edge {
+			
+		}
+
+
+		#new-0-edge {
+			fill: #888;
+			fill-opacity:0.0; 
+			stroke: #ff0000;
+			stroke-width: 10px;
+			stroke-linecap: butt;
+			stroke-linejoin: miter;
+			stroke-opacity: .5;
+		}
+
+		#new-0-edge:hover,
+		#new-0-edge.hover {
+			
+		}
+		#new-1-edge:hover,
+		#new-1-edge.hover {
+			
+		}
+		#new-2-edge:hover,
+		#new-2-edge.hover {
+			
+		}
+		#new-3-edge:hover,
+		#new-3-edge.hover {
+			
+		}
+		#new-4-edge:hover,
+		#new-4-edge.hover {
+			
+		}
+		#new-5-edge:hover,
+		#new-5-edge.hover {
+			
+		}
+		#new-6-edge:hover,
+		#new-6-edge.hover {
+			
+		}
+		#new-7-edge:hover,
+		#new-7-edge.hover {
+			
+		}
+
+
+
+		#new-1-edge {
+			fill: #888;
+			fill-opacity:0.0; 
+			stroke: #FF9400;
+			stroke-width: 10px;
+			stroke-linecap: butt;
+			stroke-linejoin: miter;
+			stroke-opacity: .5;
+		}
+		#new-2-edge {
+			fill: #888;
+			fill-opacity:0.0;
+			stroke: #FFFF00;
+			stroke-width: 10px;
+			stroke-linecap: butt;
+			stroke-linejoin: miter;
+			stroke-opacity: .5;
+		}
+		#new-3-edge {
+			fill: #888;
+			fill-opacity:0.0;
+			stroke: #8CC700;
+			stroke-width: 10px;
+			stroke-linecap: butt;
+			stroke-linejoin: miter;
+			stroke-opacity: .5;
+		}
+		#new-4-edge {
+			fill: #888;
+			fill-opacity:0.0;
+			stroke: #0FAD00;
+			stroke-width: 10px;
+			stroke-linecap: butt;
+			stroke-linejoin: miter;
+			stroke-opacity: .5;
+		}
+		#new-5-edge {
+			fill: #888;
+			fill-opacity:0.0;
+			stroke: #0064B5;
+			stroke-width: 10px;
+			stroke-linecap: butt;
+			stroke-linejoin: miter;
+			stroke-opacity: .5;
+		}
+		#new-6-edge {
+			fill: #888;
+			fill-opacity:0.0;
+			stroke: #0010A5;
+			stroke-width: 10px;
+			stroke-linecap: butt;
+			stroke-linejoin: miter;
+			stroke-opacity: .5;
+		}
+		#new-7-edge {
+			fill: #888;
+			fill-opacity:0.0;
+			stroke: #C5007C;
+			stroke-width: 10px;
+			stroke-linecap: butt;
+			stroke-linejoin: miter;
+			stroke-opacity: .5;
+		}
+
+	}
+
+
+
+
+}

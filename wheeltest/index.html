@@ -1,0 +1,1010 @@
+<!doctype html>
+<html class="nui-theme-default">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SVG Wheel Test</title>
+	<!--  -->
+	<!-- 
+		nui theme; "nui": "nicholas" ui; I know...uninspired. 
+	-->
+	<link rel="stylesheet" href="nui-theme-default.css">
+
+	<link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- 
+	For the web version, the system should work without an internet connection
+	so you can get your idea down, then login and save it later, when you have time
+	to create an account / login.
+	-->
+	<div class="nui-panels">
+
+	</div>
+
+
+	
+	<div class="nui-toolbar-top nui-toolbar">
+		<span id="breadcrumbs" class="nui-breadcrumbs"></span>
+		<!-- <ul class="nui-tools ">
+			<li class="nui-tool"></li>
+			<li class="nui-tool"></li>
+			<li class="nui-tool"></li>
+		</ul> -->
+	</div>
+	<div class="nui-toolbar-bottom nui-toolbar nui-new-notes-toolbar">
+		<div class=" nui-left">
+		</div>
+		<div class="nui-middle">
+			<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="80px" height="80px" class="new-note" id="new-item-button">
+				<g id="new-note-button">
+					<circle id="outer-circle" class="outer-circle" cx="" cy="" r=""></circle>
+					<circle id="inner-circle" class="inner-circle" cx="" cy="" r=""></circle>
+
+			    	<text family="font-awesome" 
+			    			font-size="2em"
+			    			x="27" 
+			    			y="51"
+						anchor="middle" 
+						id="new-note-button-icon" 
+				      	class="icon-edit" xlink:href="#inner-circle">&#xF055;</text>
+					<circle id="event-circle" class="event-circle event-catcher" cx="" cy="" r=""></circle>
+				</g>
+			</svg>
+		</div>
+		<div class="nui-right"></div>
+	</div>
+
+<!-- 
+	
+-->
+	
+	<div id="wheel-veil" class="nui-model-window-background for-new-item-wheel"></div>
+	<div class="nui-wheel-container" id="new-item-wheel-panel">
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="320px" height="320px" class="nui-wheel" id="new-item-wheel-container">
+		    <g id="new-item-wheel">
+				<g id="buttons">
+    				<path id="new-0" class="new-item-wheel-button wheel-item " d="M 0 0"></path>
+			    	<path id="new-1" class="new-item-wheel-button wheel-item " d="M 0 0"></path>
+			    	<path id="new-2" class="new-item-wheel-button wheel-item " d="M 0 0"></path>
+			    	<path id="new-3" class="new-item-wheel-button wheel-item " d="M 0 0"></path>
+			    	<path id="new-4" class="new-item-wheel-button wheel-item " d="M 0 0"></path>
+			    	<path id="new-5" class="new-item-wheel-button wheel-item " d="M 0 0"></path>
+			    	<path id="new-6" class="new-item-wheel-button wheel-item " d="M 0 0"></path>
+			    	<path id="new-7" class="new-item-wheel-button wheel-item " d="M 0 0"></path>
+			    </g>
+			    <g id="coloured-edges">
+			    	<path id="new-0-edge" class="new-item-wheel-edge button-edge" d="M 0 0"></path>
+			    	<path id="new-1-edge" class="new-item-wheel-edge button-edge" d="M 0 0"></path>
+			    	<path id="new-2-edge" class="new-item-wheel-edge button-edge" d="M 0 0"></path>
+			    	<path id="new-3-edge" class="new-item-wheel-edge button-edge" d="M 0 0"></path>
+			    	<path id="new-4-edge" class="new-item-wheel-edge button-edge" d="M 0 0"></path>
+			    	<path id="new-5-edge" class="new-item-wheel-edge button-edge" d="M 0 0"></path>
+			    	<path id="new-6-edge" class="new-item-wheel-edge button-edge" d="M 0 0"></path>
+			    	<path id="new-7-edge" class="new-item-wheel-edge button-edge" d="M 0 0"></path>
+			    </g>
+<!-- -->			
+			    <g id="button-icons">
+			    	<g id="icon-paths">
+						<path id="new-0-text" 
+							class="new-item-wheel-text button-text" 
+							d="M 0 0"></path>
+						<path id="new-1-text" 
+							class="new-item-wheel-text button-text" 
+							d="M 0 0"></path>
+				    	<path id="new-2-text" 
+				    		class="new-item-wheel-text button-text" 
+				    		d="M 0 0"></path>
+				    	<path id="new-3-text" 
+				    		class="new-item-wheel-text button-text" 
+				    		d="M 0 0"></path>
+				    	<path id="new-4-text" 
+				    		class="new-item-wheel-text button-text" 
+				    		d="M 0 0"></path>
+				    	<path id="new-5-text" 
+				    		class="new-item-wheel-text button-text" 
+				    		d="M 0 0"></path>
+				    	<path id="new-6-text" 
+				    		class="new-item-wheel-text button-text" 
+				    		d="M 0 0"></path>
+				    	<path id="new-7-text" 
+				    		class="new-item-wheel-text button-text" 
+				    		d="M 0 0"></path>
+				    </g>
+			    
+					<text id="icons" family="font-awesome" font-size="24px">
+<!-- Note -->
+					      <textPath 
+							anchor="middle" startoffset="20%" 
+					      	class="button-text icon-edit" xlink:href="#new-0-text">&#xF044;</textPath>
+<!-- List -->
+					      <textPath 
+							anchor="middle" startoffset="20%" 
+					      	class="button-text icon-edit" xlink:href="#new-1-text">&#xF046;</textPath>
+<!-- Camera -->
+					      <textPath 
+							anchor="middle" startoffset="20%" 
+					      	class="button-text icon-edit" xlink:href="#new-2-text">&#xF030;</textPath>
+<!-- Label/Tag -->
+					      <textPath 
+							anchor="middle" startoffset="20%" 
+					      	class="button-text icon-edit" xlink:href="#new-3-text">&#xF02B;</textPath>
+<!-- Cogs/Idea? -->
+					      <textPath 
+							anchor="middle" startoffset="20%" 
+					      	class="button-text icon-edit" xlink:href="#new-4-text">&#xF085;</textPath>
+<!-- Bell/Alarm/Notification -->
+					      <textPath 
+							anchor="middle" startoffset="20%" 
+					      	class="button-text icon-edit" xlink:href="#new-5-text">&#xF0A2;</textPath>
+<!-- Audio/Microphone -->
+					      <textPath 
+							anchor="middle" startoffset="20%" 
+					      	class="button-text icon-edit" xlink:href="#new-6-text">&#xF130;</textPath>
+<!-- Unfilled/Ban/No Sign -->
+					      <textPath 
+							anchor="middle" startoffset="20%" 
+					      	class="button-text icon-edit" xlink:href="#new-7-text">&#xF05E;</textPath>
+
+					</text>
+				</g>
+<!-- 
+Okily. Because of the text on top of the visible buttons,
+in order to detect when someone was over (and not over) a button,
+I had to create these, to which I will have the actual mouse events connected.
+-->
+				<g id="button-aliases">
+			    	<path data-alias-of="new-0" id="new-0-alias" class="new-item-wheel-button wheel-item-alias " d="M 0 0"></path>
+			    	<path data-alias-of="new-1" id="new-1-alias" class="new-item-wheel-button wheel-item-alias " d="M 0 0"></path>
+			    	<path data-alias-of="new-2" id="new-2-alias" class="new-item-wheel-button wheel-item-alias " d="M 0 0"></path>
+			    	<path data-alias-of="new-3" id="new-3-alias" class="new-item-wheel-button wheel-item-alias " d="M 0 0"></path>
+			    	<path data-alias-of="new-4" id="new-4-alias" class="new-item-wheel-button wheel-item-alias " d="M 0 0"></path>
+			    	<path data-alias-of="new-5" id="new-5-alias" class="new-item-wheel-button wheel-item-alias " d="M 0 0"></path>
+			    	<path data-alias-of="new-6" id="new-6-alias" class="new-item-wheel-button wheel-item-alias " d="M 0 0"></path>
+			    	<path data-alias-of="new-7" id="new-7-alias" class="new-item-wheel-button wheel-item-alias " d="M 0 0"></path>
+			    </g>
+
+		    	<circle id="center-button" class="new-item-wheel-button center-item " cx="" cy="" r="">
+		    	</circle>
+
+		    	<text family="font-awesome" 
+		    			font-size="3em"
+		    			x="140" 
+		    			y="177"
+					anchor="middle" 
+			      	class="middle-button-text  icon-edit" xlink:href="#center-button">&#xF056;</text>
+
+		    	<circle id="center-event-button" class="new-item-wheel-button center-item event-catcher" cx="" cy="" r="">
+		    	</circle>
+
+		  	</g>
+		</svg>
+<!--
+
+-->
+	</div> <!-- wheel container -->
+<!--
+
+-->
+	<div id="veil" class="nui-model-window-background"></div>
+
+<!--
+
+-->
+
+	<script>
+	var calcDonutPieces = function (settings, data) {
+		"use strict";
+
+		var defaults = {
+				center: {x:320, y:320},  // [cx, cy]
+				radii: [50, 150], 	 // inner outer radii; smaller is inner;
+				pieces: [45, 45, 45, 45, 45, 45, 45, 45], 
+// angle of zero (0) or 360deg is along the horizontal (x-axis).
+// to convert to y-axis (vertical/12 o'clock)
+// subract 90 from 360
+// for additional offset subract from result
+				offset: 360 - 90 - 22.5, 
+
+			},
+			options = (settings === undefined)? defaults : settings, // all or nothing
+// the return value
+			donutPiece = "",
+			edgePiece = "",
+			textPiece = "",
+// the pointIndex
+			pointIndex = 0,
+			allPoints = data || {inner: [], outer: [], middle: []},
+			innerRadius = (options.radii[0] < options.radii[1])? options.radii[0] : options.radii[1],
+			outerRadius = (options.radii[0] > options.radii[1])? options.radii[0] : options.radii[1],
+			middleRadius = 0,
+			donutPieces = {
+				'buttons': [],
+				'edges': [],
+				'text': [],
+			},
+			angle = 0;
+
+		if (innerRadius === outerRadius) {
+			console.log('Dude, wtf? Radii can\'t be equal.');
+			return null;
+		}
+
+// 33% of the difference
+		middleRadius = (innerRadius + ((outerRadius - innerRadius) * .33)); 
+// Point 1 and Point 2 use larger radius.
+		angle = angle + options.offset;
+
+		for (pointIndex = 0; pointIndex < options.pieces.length; pointIndex++) {
+// Outer Radius
+			allPoints.outer[pointIndex] = polar2Cartesian(options.center, 
+				outerRadius, angle);
+// Text/Middle
+			allPoints.middle[pointIndex] = polar2Cartesian(options.center, 
+				middleRadius, angle);
+// Inner Radius
+			allPoints.inner[pointIndex] = polar2Cartesian(options.center, 
+				innerRadius, angle);
+
+			angle = angle + options.pieces[pointIndex]; // calc angle offset
+		}
+
+// Calculate Point 1 and Point 2
+// SVG Command: Move To: Point 1
+// Draw Arc ending at Point 2
+// Point 3 and Point 4 use smaller radius
+// Calculate Point 3 and Point 4
+// Draw Line to Point 3
+// Draw Arc to Point 4
+// Draw Line to Point 1
+		for (pointIndex = 0; pointIndex < options.pieces.length; pointIndex++) {
+			donutPiece = '';
+			edgePiece = '';
+			textPiece = '';
+			if (pointIndex === options.pieces.length-1) {
+
+// Move to start of next donut.
+// the right side is actually the first donut piece
+				donutPiece += ' M ' + allPoints.outer[pointIndex].x + ' ' + 
+					allPoints.outer[pointIndex].y;
+				donutPiece += ' A ' +  outerRadius + ' ' + outerRadius + ' 0 0 1 ' + 
+					allPoints.outer[0].x + ' ' + 
+					allPoints.outer[0].y + '';
+// EDGE is the same as the outer arc
+				edgePiece += ' M ' + allPoints.outer[pointIndex].x + ' ' + 
+					allPoints.outer[pointIndex].y;
+				edgePiece += ' A ' + outerRadius + ' ' + outerRadius + ' 0 0 1 ' + 
+					allPoints.outer[0].x + ' ' + 
+					allPoints.outer[0].y + '';
+
+// Text same as outer only uses middle instead of outer
+				textPiece += ' M ' + 
+					allPoints.middle[pointIndex].x + ' ' + 
+					allPoints.middle[pointIndex].y;
+				textPiece += ' L ' + 
+					allPoints.middle[0].x + ' ' + 
+					allPoints.middle[0].y + '';
+/*				textPiece += ' A ' + 
+					middleRadius + ' ' + 
+					middleRadius + 
+					' 0 0 1 ' + 
+					allPoints.middle[0].x + ' ' + 
+					allPoints.middle[0].y + '';
+*/
+
+	// Line to inner arc
+				donutPiece += ' L ' + allPoints.inner[0].x + ' ' + 
+					allPoints.inner[0].y + '';
+
+	// We're drawing clockwise so this arc line starts on the "right" and goes "left"
+				donutPiece += ' A ' + innerRadius + ' ' + 
+					innerRadius + ' 0 0 0 ' + allPoints.inner[pointIndex].x + ' ' + 
+					allPoints.inner[pointIndex].y + '';
+
+	// Line back to the beginning
+				//donutPiece += ' L ' + allPoints.inner[pointIndex].x + ' ' + 
+				//	allPoints.inner[pointIndex].y + '';
+				donutPiece += ' Z';
+			}
+			else {
+	// Move to
+				donutPiece += ' M ' + allPoints.outer[pointIndex].x + ' ' + allPoints.outer[pointIndex].y; 
+	// Outer Arc
+				donutPiece += ' A ' + outerRadius + ' ' + outerRadius + ' 0 0 1 ' + 
+					allPoints.outer[pointIndex+1].x + ' ' + 
+					allPoints.outer[pointIndex+1].y + '';
+// EDGE is the same as the outer arc
+				edgePiece += ' M ' + allPoints.outer[pointIndex].x + ' ' + allPoints.outer[pointIndex].y;
+				edgePiece += ' A ' + outerRadius + ' ' + outerRadius + ' 0 0 1 ' + 
+					allPoints.outer[pointIndex+1].x + ' ' + 
+					allPoints.outer[pointIndex+1].y + '';
+// MIDDLE/TEXT Arc
+				textPiece += ' M ' + allPoints.middle[pointIndex].x + ' ' + allPoints.middle[pointIndex].y;
+				textPiece += ' L ' + 
+					allPoints.middle[pointIndex+1].x + ' ' + 
+					allPoints.middle[pointIndex+1].y + '';
+/*
+				textPiece += ' A ' + middleRadius + ' ' + middleRadius + ' 0 0 1 ' + 
+					allPoints.middle[pointIndex+1].x + ' ' + 
+					allPoints.middle[pointIndex+1].y + '';
+*/
+
+	// Line to inner arc (right side)
+				donutPiece += ' L ' + allPoints.inner[pointIndex+1].x + ' ' + 
+					allPoints.inner[pointIndex+1].y + '';
+	// We're drawing clockwise so this arc line starts on the "right" and goes "left"
+	//			donutPiece += ' L ' + allPoints.inner[pointIndex+1].x + ' ' + 
+	//				allPoints.outer[pointIndex+1].y + ''; 
+
+				donutPiece += ' A ' + innerRadius + ' ' + 
+					innerRadius + ' 0 0 0 ' + 
+					allPoints.inner[pointIndex].x + ' ' + 
+					allPoints.inner[pointIndex].y + '';
+
+	// Line back to the beginning
+//				donutPiece += ' L ' + allPoints.inner[pointIndex].x + ' ' + 
+//					allPoints.inner[pointIndex].y + '';
+				donutPiece += ' Z';
+
+			}
+			donutPieces['buttons'][pointIndex] = '' + donutPiece + '';
+			donutPieces['edges'][pointIndex] = '' + edgePiece + '';
+			donutPieces['text'][pointIndex] = '' + textPiece + '';
+		}
+
+		
+		// original code: 
+		// http://stackoverflow.com/questions/5736398/how-to-calculate-the-svg-path-for-an-arc-of-a-circle
+		// 
+		function polar2Cartesian(c, r, ad) {
+			"use strict";
+
+			var ar = ad * Math.PI / 180.0, 	// calc angle in radians from the angle in degrees, and PI
+				x = c.x + r * Math.cos(ar),	// calc x using the x of the center (cx), 
+											// radius (r) and the angle in radians (ar).
+				y = c.y + r * Math.sin(ar);  // calc y using the y of the center (cy),
+											// radius (r) and the angle in radians (ar).
+//			console.dir(c);
+//			console.log('cx: ' + c.x);
+//			console.log('cy: ' + c.y);
+//			console.log('r: ' + r);
+//			console.log('ad: ' + ad);
+//			console.log('ar: ' + ar);
+
+		// Return a point array with x,y
+			return {'x': x, 'y': y};
+		}
+
+		return donutPieces;
+	};
+
+	var makeDonutPieces = function (settings, buttons, edges, text) {
+		"use strict";
+
+		var defaults = {
+				'container': '#new-item-wheel',
+				'classes': [],
+				'ids': [],
+			},
+			options = (settings === undefined)? defaults : settings,
+			index = 0,
+			timeoutID;
+
+//console.log('data.length: ' + buttons.length);
+
+// inject
+		function delayedRender(options, buttons, edges, text) {
+//			
+			injectPathData(options.ids[index], buttons[index]);
+//
+			injectPathData(options.ids[index] + '-alias', buttons[index]);
+//
+			injectPathData(options.ids[index] + '-edge', edges[index]);
+//
+			injectPathData(options.ids[index] + '-text', text[index]);
+			index++;
+
+			if (index >= buttons.length) {
+				clearInterval(timeoutID);
+			}
+		}
+
+		timeoutID = window.setInterval(delayedRender, 25, options, buttons, edges, text);
+
+// id is the id of the element we are injecting into,
+// data is the SVG Path Data we are injecting
+		function injectPathData(id, data) {
+			"use strict";
+			var query = document.querySelectorAll('#' + id),
+				path,
+				attrs,	// array of attribute objects
+				attr,	// a single attribute object
+				aIndex = 0;
+//console.log('#' + id);
+//console.dir(query);
+// only care if the query found something
+			if (query.length > 0) {
+				path = query[0];
+//console.dir(path);
+// now, let's look for the 'd' attribute
+				attrs = path.attributes;
+//console.log(attrs);
+//console.log(attrs.length);
+				for (aIndex = 0; aIndex < attrs.length; aIndex++) {
+// alias
+					attr = attrs[aIndex];
+//console.log('attr: ' + attr.name);
+					if (attr.name === 'd') {
+// inject data
+//console.log('inject data');
+						attr.value = data;
+// return true so we know it worked.
+						return true;
+					}
+				}
+			}
+// indicates data injection didn't take place 
+			return false; 
+		}
+
+// just makes a path element in the given svg parent
+// 'parent' selector assumes you are naming the svg element
+		function injectNewPath(parent, id, classes) {
+			var query = document.querySelectorAll(parent + ' g'),
+				g, // the svg container
+				path;
+
+			g = query[0]; // should only be one; use first one no matter what
+
+			path = document.createElement('path');
+			path.setAttribute('id', id);
+			path.setAttribute('class', classes);
+			path.setAttribute('d', 'M 0 0');
+// 
+			g.appendChild(path);
+		}
+	};
+
+	var makeMiddleButton = function (cx, cy, r) {
+		var visibleButtonID = 'center-button',
+			eventButtonID = 'center-event-button',
+			queries = [
+				document.querySelectorAll('#' + visibleButtonID),
+				document.querySelectorAll('#' + eventButtonID)],
+			path,
+			attrCounter = 0,
+			attrs,
+			attr,
+			aIndex = 0,
+			qIndex = 0;
+
+
+		for (qIndex = 0; qIndex < queries.length; qIndex++) {
+
+			if (queries[qIndex].length > 0) {
+				path = queries[qIndex][0];
+//console.dir(path);
+// now, let's look for the 'd' attribute
+				attrs = path.attributes;
+//console.log(attrs);
+//console.log(attrs.length);
+				for (aIndex = 0; aIndex < attrs.length; aIndex++) {
+// alias
+					attr = attrs[aIndex];
+//console.log('attr: ' + attr.name);
+					if (attr.name === 'cx') {
+// inject data
+						attr.value = cx;
+						attrCounter++;
+						if (attrCounter === 3) {
+							break;
+						}
+// return true so we know it worked.
+					}
+					else if (attr.name === 'cy') {
+// inject data
+						attr.value = cy;
+						attrCounter++;
+						if (attrCounter === 3) {
+							break;
+						}
+					}
+					else if (attr.name === 'r') {
+// inject data
+						attr.value = r;
+						attrCounter++;
+						if (attrCounter === 3) {
+							break;
+						}
+					}
+				}
+			}
+		}
+	};
+
+
+	</script>
+
+	<script>
+		window.onload = function () {
+			var centerPoint = {x:160, y:160};
+			var data = calcDonutPieces({
+				center: centerPoint,  // [cx, cy]
+				radii: [50, 150], 	 // inner outer radii; smaller is inner;
+				pieces: [45, 45, 45, 45, 45, 45, 45, 45], 
+// angle of zero (0) or 360deg is along the horizontal (x-axis).
+// to convert to y-axis (vertical/12 o'clock)
+// subract 90 from 360
+// for additional offset subract from result
+				offset: 360 - 90 - 22.5, 
+
+			});
+			makeDonutPieces(
+				{
+					'container': '#new-item-wheel',
+					'classes': [
+						'wheel-item ',
+						'wheel-item ',
+						'wheel-item ',
+						'wheel-item ',
+						'wheel-item ',
+						'wheel-item ',
+						'wheel-item ',
+						'wheel-item ',
+					],
+					'ids': [
+						'new-0',
+						'new-1',
+						'new-2',
+						'new-3',
+						'new-4',
+						'new-5',
+						'new-6',
+						'new-7',
+					],
+				},
+				data.buttons,
+				data.edges,
+				data.text
+			);
+			makeMiddleButton(centerPoint.x, centerPoint.y, 50);
+			ghostHover();
+			makeNewNoteButton();
+			hideNewNoteWheel();
+		};
+
+
+		function ghostHover() {
+			var elementPattern = '.wheel-item-alias',
+				query = document.querySelectorAll(elementPattern),
+				item = null,
+				eIndex = 0,
+				cIndex = 0;
+
+			for (eIndex = 0; eIndex < query.length; eIndex++) {
+				item = query[eIndex];
+
+				item.onmouseover = function (e) {
+					var aliasOf = this.getAttribute('data-alias-of'),
+						alias = document.querySelectorAll('#' + aliasOf)[0],
+						edge = document.querySelectorAll('#' + aliasOf + '-edge')[0];
+
+					this.classList.add("hover");
+					alias.classList.add("hover");
+					edge.classList.add("hover");
+
+					e.stopPropagation(); // W3C
+				};
+				item.onmouseout = function (e) {
+					var aliasOf = this.getAttribute('data-alias-of'),
+						alias = document.querySelectorAll('#' + aliasOf)[0],
+						edge = document.querySelectorAll('#' + aliasOf + '-edge')[0];
+
+					this.classList.remove("hover");
+					alias.classList.remove("hover");
+					edge.classList.remove("hover");
+
+					e.stopPropagation(); // W3C
+				};
+
+				// Not Chrome Compatible; does not bubble
+				item.onmouseleave = function (e) {
+					console.log('mouse leave');
+					console.dir(this);
+				};
+				// Not Chrome Compatible; does not bubble
+				item.onmouseenter = function (e) {
+					console.log('mouse enter');
+					console.dir(this);
+				};
+
+			}
+		}
+
+		function newNoteHover() {
+			var elementPattern = '#event-circle',
+				query = document.querySelectorAll(elementPattern),
+				item = null,
+				eIndex = 0,
+				cIndex = 0;
+
+			for (eIndex = 0; eIndex < query.length; eIndex++) {
+				item = query[eIndex];
+
+				item.onmouseover = function (e) {
+					var aliasOf = this.getAttribute('data-alias-of'),
+						alias = document.querySelectorAll('#' + aliasOf)[0],
+						edge = document.querySelectorAll('#' + aliasOf + '-edge')[0];
+
+					this.classList.add("hover");
+					alias.classList.add("hover");
+					edge.classList.add("hover");
+
+					e.stopPropagation(); // W3C
+				};
+				item.onmouseout = function (e) {
+					var aliasOf = this.getAttribute('data-alias-of'),
+						alias = document.querySelectorAll('#' + aliasOf)[0],
+						edge = document.querySelectorAll('#' + aliasOf + '-edge')[0];
+
+					this.classList.remove("hover");
+					alias.classList.remove("hover");
+					edge.classList.remove("hover");
+
+					e.stopPropagation(); // W3C
+				};
+
+				// Not Chrome Compatible
+				item.onmouseleave = function (e) {
+					console.log('mouse leave');
+					console.dir(this);
+				};
+				// Not Chrome Compatible
+				item.onmouseenter = function (e) {
+					console.log('mouse enter');
+					console.dir(this);
+				};
+			}
+		}
+
+
+		function showNewNoteWheel() {
+			var bSelector = '#center-event-button',
+				bQuery = document.querySelectorAll(bSelector),
+				bElement = bQuery[0],
+				// 
+				wSelector = '.wheel-item',
+				wQuery = document.querySelectorAll(wSelector),
+				wIndex = 0,
+				//
+				tSelector = '#icons .button-text',
+				tQuery = document.querySelectorAll(tSelector),
+				//
+				pSelector = '#icon-paths .button-text',
+				pQuery = document.querySelectorAll(tSelector),
+				//
+				aSelector = '.wheel-item-alias',
+				aQuery = document.querySelectorAll(aSelector),
+				//
+				eSelector = '.button-edge',
+				eQuery = document.querySelectorAll(eSelector),
+				//
+				newNoteWheelHousing = document.querySelectorAll('#new-item-wheel-container')[0],
+				newItemWheelPanel = document.querySelectorAll('#new-item-wheel-panel')[0],
+				//			
+				newNoteWheel = document.querySelectorAll('#new-item-wheel')[0],
+				veil = document.querySelectorAll('#wheel-veil')[0],
+				// 
+				timeout;
+
+			if (newNoteWheelHousing.style.display === 'block') {
+				return hideNewNoteWheel();
+			}
+
+			newItemWheelPanel.style.display = 'block';
+			newNoteWheelHousing.style.display = 'block';
+			newNoteWheel.style.display = 'block';
+			bElement.style.display = 'block';
+			veil.style.display = 'block';
+
+			timeout = window.setInterval(showElements, 25, wQuery, aQuery, eQuery, pQuery, tQuery, bQuery);
+
+			function showElements(elements, aliases, edges, textPaths, text, centerButton) {
+				var icon;
+				// not even sure this works on SVG elements :)
+				elements[wIndex].style.display = 'block';
+				aliases[wIndex].style.display = 'block';
+				edges[wIndex].style.display = 'block';
+				textPaths[wIndex].style.display = 'block';
+				text[wIndex].style.display = 'block';
+
+				wIndex++;
+
+				if (wIndex === elements.length) {
+					window.clearInterval(timeout);
+					icon = document.querySelectorAll('#new-note-button-icon')[0];
+					icon.childNodes[0].data = '\uF056'; // minus
+				}
+			}
+		}
+
+		function hideNewNoteWheel() {
+			var bSelector = '#center-event-button',
+				bQuery = document.querySelectorAll(bSelector),
+				bElement = bQuery[0],
+
+				wSelector = '.wheel-item',
+				wQuery = document.querySelectorAll(wSelector),
+				wIndex = wQuery.length-1,
+
+				tSelector = '#icons .button-text',
+				tQuery = document.querySelectorAll(tSelector),
+				//
+				pSelector = '#icon-paths .button-text',
+				pQuery = document.querySelectorAll(tSelector),
+				//
+				aSelector = '.wheel-item-alias',
+				aQuery = document.querySelectorAll(aSelector),
+				//
+				eSelector = '.button-edge',
+				eQuery = document.querySelectorAll(eSelector),
+				// 
+				timeout;
+
+			timeout = window.setInterval(hideElements, 25, wQuery, aQuery, eQuery, pQuery, tQuery, bQuery);
+
+			function hideElements(elements, aliases, edges, textPaths, text, centerButton) {
+				var icon,
+					veil,
+					newItemWheelPanel,
+					newItemWheelContainer,
+					newItemWheel;
+				// display : none; even works on SVG elements!
+				elements[wIndex].style.display = 'none';
+				aliases[wIndex].style.display = 'none';
+				edges[wIndex].style.display = 'none';
+				textPaths[wIndex].style.display = 'none';
+				text[wIndex].style.display = 'none';
+
+				wIndex--;
+
+				if (wIndex === -1) {
+					window.clearInterval(timeout);
+					icon = document.querySelectorAll('#new-note-button-icon')[0];
+					veil = document.querySelectorAll('#wheel-veil')[0];
+					
+					newItemWheelPanel = document.querySelectorAll('#new-item-wheel-panel')[0];
+					newItemWheelContainer = document.querySelectorAll('#new-item-wheel-container')[0];
+					newItemWheel = document.querySelectorAll('#new-item-wheel')[0];
+
+					bQuery[0].style.display = 'none';
+					newItemWheelContainer.style.display = 'none';
+					newItemWheel.style.display = 'none';
+
+					veil.style.display = 'none';
+					icon.childNodes[0].data = '\uF055'; // plus
+				}
+			}
+		}
+
+		function makeNewNoteButton() {
+			"use strict";
+
+			var smallCircle = document.querySelectorAll('#inner-circle')[0],
+				bigCircle = document.querySelectorAll('#outer-circle')[0],
+				eventCircle =  document.querySelectorAll('#event-circle')[0],
+				circles = [smallCircle, bigCircle, eventCircle],
+				radii = [25, 35, 40],
+				circle,
+				i = 0,
+				attrs,
+				attr,
+				attrCounter = 0,
+				aIndex = 0,
+				cx = 40,
+				cy = 40,
+				r = 0,
+				index = 0;
+
+			for (i = 0; i < circles.length; i = i+1) {
+				// 			
+				circle = circles[i];
+				attrs = circle.attributes;
+				attrCounter = 0;
+
+				for (aIndex = 0; aIndex < attrs.length; aIndex++) {
+					// 
+					attr = attrs[aIndex];
+
+					if (attr.name === 'cx') {
+						// inject data 
+						attr.value = cx;
+						attrCounter++;
+						if (attrCounter === 3) {
+							break;
+						}
+					// return true so we know it worked.
+					}
+					else if (attr.name === 'cy') {
+						// inject data
+						attr.value = cy;
+						attrCounter++;
+						if (attrCounter === 3) {
+							break;
+						}
+					}
+					else if (attr.name === 'r') {
+						// inject data
+						r = radii[i];
+						attr.value = r;
+						attrCounter++;
+						if (attrCounter === 3) {
+							break;
+						}
+					}
+				}
+			}
+		}
+
+		// 
+		var showNewNoteWheel_btn =  document.querySelectorAll('#event-circle')[0];
+		showNewNoteWheel_btn.onclick = function (e) {
+			showNewNoteWheel();
+		};
+		
+		showNewNoteWheel_btn.onmouseover = function (e) {
+			var circles = document.querySelectorAll('#new-note-button circle'),
+				circle,
+				cIndex = 0;
+
+			for (cIndex = 0; cIndex < circles.length; cIndex++) {
+				circle = circles[cIndex];
+				circle.classList.add('hover');
+			}
+
+			e.stopPropagation();
+		};
+		showNewNoteWheel_btn.onmouseout = function (e) {
+			var circles = document.querySelectorAll('#new-note-button circle'),
+				circle,
+				cIndex = 0;
+
+			for (cIndex = 0; cIndex < circles.length; cIndex++) {
+				circle = circles[cIndex];
+				circle.classList.remove('hover');
+			}
+
+			e.stopPropagation();
+		};
+
+		//
+		var hideNewNoteWheel_btn = document.querySelectorAll('#center-event-button')[0];
+		hideNewNoteWheel_btn.onclick = function (e) {
+			hideNewNoteWheel();
+		};
+
+		hideNewNoteWheel_btn.onmouseover = function (e) {
+			var buttons = document.querySelectorAll('#center-button'),
+				button,
+				bIndex = 0;
+
+			for (bIndex = 0; bIndex < buttons.length; bIndex++) {
+				button = buttons[bIndex];
+				button.classList.add('hover');
+			}
+
+			e.stopPropagation();
+		};
+		hideNewNoteWheel_btn.onmouseout = function (e) {
+			var buttons = document.querySelectorAll('#center-button'),
+				button,
+				bIndex = 0;
+
+			for (bIndex = 0; bIndex < buttons.length; bIndex++) {
+				button = buttons[bIndex];
+				button.classList.remove('hover');
+			}
+
+			e.stopPropagation();
+		};
+/*
+
+		var icon =  document.querySelectorAll('#new-note-button-icon')[0];
+		
+		console.dir(icon.childNodes[0].data);
+		icon.childNodes[0].data = '\uF056'; // minus
+		icon.childNodes[0].data = '\uF055'; // plus
+		console.log(icon.textContent);
+
+*/
+
+
+
+	</script>
+
+	<script>
+	(function (window, document, undefined) {
+		var minWheelDiameter = 200;
+
+/*
+	if the "height" (shortest one between actual width and height) 
+	is less than 200px + (top toolbar) + (bottom toolbar) + 
+		(vertical margins | padding)
+	then the diameter of the wheel should be ~98% of the height;
+
+	only add on toolbars if it is the actual height
+
+	smallest the diameter should be is 200px;
+	limit on how large it can get?
+
+
+
+*/
+		function getWindowHeight() {
+			return getWindowWidthHeight("height");
+		}
+		function getWindowWidth() {
+			return getWindowWidthHeight("width");
+		}
+		function getWindowWidthHeight(direction) {
+			var height = window.innerHeight,
+				width = window.innerWidth;
+			/*
+			var height = window.outerHeight,
+				width = window.outerWidth;
+			*/
+
+			// width is the short of the two
+			// height is the taller of the two
+
+			if (direction === 'height') {
+				return (height >= width)? height : width;
+			}
+			else if (direction === 'width') {
+				return (height >= width)? width : height;
+			}
+		}
+
+
+		function calcVMargin() {
+
+		}
+		function calculateWheelSize() {
+			var minDiameter = 200,
+				shortways = getWindowWidth('width'),
+				toolbars = 80,
+				spacing = 10,
+				minSpaceNeeded = (minDiameter + (toolbars * 2) + (spacing * 2));
+
+			if (minSpaceNeeded < shortways) {
+				console.log('max: ' + minSpaceNeeded + ': ' + shortways);
+				return (shortways - (toolbars * 2) - (spacing * 2));
+			} 
+			else if (minSpaceNeeded >= shortways) {
+				console.log('min');
+				return minDiameter;
+			}
+		}
+
+		function verticallyCenterWheel() {
+			var wheel = document.querySelectorAll('#new-item-wheel-panel')[0];
+
+			console.log('Height: ' + getWindowHeight());
+			console.log('Width: ' + getWindowWidth());
+		}
+
+		console.log(calculateWheelSize());
+
+/*  
+	height is always >= width
+	get window width px;
+	find ~98% of width in px;
+	get window height px;
+	vMargin = window height - 98% of width / 2;
+*/
+	} (window, document));
+	</script>
+
+
+</body>
+</html>
